@@ -26,6 +26,7 @@ interface InterestRequest {
   name: string;
   email: string;
   interest: string;
+  package?: string;
 }
 
 type NotificationRequest = ProjectInquiryRequest | InterestRequest;
@@ -67,19 +68,23 @@ const handler = async (req: Request): Promise<Response> => {
       `;
     } else {
       subject = `New Interest Submission from ${data.name}`;
+      const packageHtml = data.package
+        ? `<p><strong>Package:</strong> ${data.package === 'project-based' ? 'Project Based' : 'Creative Partnership'}</p>`
+        : '';
       emailHtml = `
         <h2>Someone is Interested!</h2>
         <p><strong>Name:</strong> ${data.name}</p>
         <p><strong>Email:</strong> ${data.email}</p>
         <p><strong>Interest:</strong> ${data.interest}</p>
+        ${packageHtml}
       `;
     }
 
     console.log(`Sending notification email: ${subject}`);
 
     const emailResponse = await resend.emails.send({
-      from: "VisionBoi Notifications <onboarding@resend.dev>",
-      to: ["hi@visionboi.com"],
+      from: "Konbinai Notifications <onboarding@resend.dev>",
+      to: ["konbinai.visual@gmail.com"],
       subject: subject,
       html: emailHtml,
     });

@@ -105,8 +105,11 @@ const ProjectInquiry = () => {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center px-6">
         <div className="max-w-[600px] text-center space-y-6 animate-fade-in">
-          <h1 className="font-display font-bold text-white text-[48px] lg:text-[64px] leading-[1.1]">
-            Thanks.
+          <h1 
+            className="font-bold text-white text-[48px] lg:text-[64px] leading-[1.1]"
+            style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
+          >
+            Perfect. Lets create something Great!
           </h1>
           <p className="font-body text-white/85 text-[18px] lg:text-[20px]">
             We'll reply within 24–48 hours.

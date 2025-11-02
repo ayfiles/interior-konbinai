@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -23,9 +23,39 @@ const ContactSection = () => {
     name: "",
     email: "",
     interest: "",
+    package: "",
   });
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
+
+  // Check URL params for package selection
+  useEffect(() => {
+    const checkParams = () => {
+      const params = new URLSearchParams(window.location.search);
+      const packageParam = params.get('package');
+      if (packageParam === 'project-based' || packageParam === 'creative-partnership') {
+        setFormData((prev) => {
+          if (prev.package !== packageParam) {
+            return { ...prev, package: packageParam };
+          }
+          return prev;
+        });
+        // Clean URL after setting
+        setTimeout(() => {
+          window.history.replaceState({}, '', window.location.pathname);
+        }, 100);
+      }
+    };
+    
+    checkParams();
+    // Check periodically if we're on the contact section
+    const interval = setInterval(checkParams, 200);
+    window.addEventListener('popstate', checkParams);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('popstate', checkParams);
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +71,7 @@ const ContactSection = () => {
         },
       });
       toast.success("Thanks! We'll be in touch soon.");
-      setFormData({ name: "", email: "", interest: "" });
+      setFormData({ name: "", email: "", interest: "", package: "" });
       setAcceptPrivacy(false);
     } catch (error) {
       console.error("Error sending notification:", error);
@@ -114,6 +144,24 @@ const ContactSection = () => {
                 <SelectItem value="motion-video">{texts[currentLang].interest_motion}</SelectItem>
                 <SelectItem value="creative-direction">{texts[currentLang].interest_direction}</SelectItem>
                 <SelectItem value="consulting">{texts[currentLang].interest_consulting}</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="package" className="font-body text-white/90 text-[15px]">
+              {texts[currentLang].form_package}
+            </Label>
+            <Select
+              value={formData.package}
+              onValueChange={(value) => setFormData({ ...formData, package: value })}
+            >
+              <SelectTrigger className="bg-white/10 border-white/20 text-white rounded-xl h-12">
+                <SelectValue placeholder={texts[currentLang].package_select} />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="project-based">{texts[currentLang].package_project}</SelectItem>
+                <SelectItem value="creative-partnership">{texts[currentLang].package_partnership}</SelectItem>
               </SelectContent>
             </Select>
           </div>

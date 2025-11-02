@@ -78,6 +78,10 @@ export const texts = {
     form_name: "Name",
     form_email: "Email",
     form_interest: "I'm interested in",
+    form_package: "Package",
+    package_select: "Select a package",
+    package_project: "Project Based",
+    package_partnership: "Creative Partnership",
     form_budget: "Budget Range *",
 
     interest_ai: "AI Campaigns",
@@ -194,6 +198,10 @@ export const texts = {
     form_name: "Name",
     form_email: "E-Mail",
     form_interest: "Ich interessiere mich für",
+    form_package: "Package",
+    package_select: "Package auswählen",
+    package_project: "Project Based",
+    package_partnership: "Creative Partnership",
     form_budget: "Budgetrahmen *",
 
     interest_ai: "AI Kampagnen",

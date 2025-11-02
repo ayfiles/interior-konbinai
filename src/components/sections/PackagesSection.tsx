@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { texts } from '@/lib/texts';
 import { Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const PackagesSection = () => {
   const { currentLang } = useLanguage();
@@ -143,6 +144,21 @@ const PackagesSection = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-4">
+                <Button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  size="lg"
+                  className="w-full rounded-pill bg-white/20 border border-white/30 ring-1 ring-white/40 shadow-xl backdrop-blur-frosted text-white font-label text-[15px] px-8 py-6 transition-all duration-300 hover:bg-white/10 hover:ring-white/60"
+                >
+                  {texts[currentLang].hero_cta}
+                </Button>
               </div>
             </div>
           ))}

@@ -102,7 +102,7 @@ const PackagesSection = () => {
               onMouseMove={(e) => handleMouseMove(e, index)}
               onMouseLeave={() => resetTilt(index)}
               className={[
-                'group relative rounded-[28px] p-8 lg:p-12 space-y-6',
+                'group relative rounded-[28px] p-8 lg:p-12 flex flex-col',
                 // Base look
                 'bg-black/40 border border-white/[0.06]',
                 // Scroll reveal
@@ -119,35 +119,37 @@ const PackagesSection = () => {
               {/* Glow overlay */}
               <div className="pointer-events-none absolute inset-0 rounded-[28px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'radial-gradient(120px 120px at 50% 20%, rgba(255,255,255,0.07), rgba(255,255,255,0))' }} />
               
-              {/* Title */}
-              <h3 className="font-bold text-white text-[26px] lg:text-[30px]" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>
-                {pkg.title}
-              </h3>
+              <div className="space-y-6 flex-grow">
+                {/* Title */}
+                <h3 className="font-bold text-white text-[26px] lg:text-[30px]" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>
+                  {pkg.title}
+                </h3>
 
-              {/* Description */}
-              <p className="font-body text-white/85 text-[16px] lg:text-[17px] leading-relaxed">
-                {pkg.description}
-              </p>
-
-              {/* Features List */}
-              <div className="space-y-3 pt-2">
-                <p className="font-body font-medium text-white/90 text-[14px] uppercase tracking-wide">
-                  {texts[currentLang].packages_included || 'Included Services'}
+                {/* Description */}
+                <p className="font-body text-white/85 text-[16px] lg:text-[17px] leading-relaxed">
+                  {pkg.description}
                 </p>
-                <ul className="space-y-2.5">
-                  {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-white/80 flex-shrink-0 mt-0.5" />
-                      <span className="font-body text-white/80 text-[15px] leading-relaxed">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+
+                {/* Features List */}
+                <div className="space-y-3 pt-2">
+                  <p className="font-body font-medium text-white/90 text-[14px] uppercase tracking-wide">
+                    {texts[currentLang].packages_included || 'Included Services'}
+                  </p>
+                  <ul className="space-y-2.5">
+                    {pkg.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-white/80 flex-shrink-0 mt-0.5" />
+                        <span className="font-body text-white/80 text-[15px] leading-relaxed">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4">
+              <div className="pt-4 mt-auto">
                 <Button
                   onClick={() =>
                     document

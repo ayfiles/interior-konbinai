@@ -17,6 +17,8 @@ import { ArrowLeft, Upload, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { texts } from "@/lib/texts";
 import { supabase } from "@/integrations/supabase/client";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 
 const ProjectInquiry = () => {
@@ -103,31 +105,37 @@ const ProjectInquiry = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center px-6">
-        <div className="max-w-[600px] text-center space-y-6 animate-fade-in">
-          <h1 
-            className="font-bold text-white text-[48px] lg:text-[64px] leading-[1.1]"
-            style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
-          >
-            Perfect. Lets create something Great!
-          </h1>
-          <p className="font-body text-white/85 text-[18px] lg:text-[20px]">
-            We'll reply within 24–48 hours.
-          </p>
-          <Button
-            onClick={() => navigate("/")}
-            size="lg"
-            className="rounded-pill bg-white text-black hover:bg-white/90 font-label text-[15px] px-10 mt-8"
-          >
-            Return Home
-          </Button>
+      <div className="min-h-screen bg-black flex flex-col">
+        <Navbar />
+        <div className="flex-1 flex items-center justify-center px-6">
+          <div className="max-w-[600px] text-center space-y-6 animate-fade-in">
+            <h1 
+              className="font-bold text-white text-[48px] lg:text-[64px] leading-[1.1]"
+              style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
+            >
+              Perfect. Lets create something Great!
+            </h1>
+            <p className="font-body text-white/85 text-[18px] lg:text-[20px]">
+              We'll reply within 24–48 hours.
+            </p>
+            <Button
+              onClick={() => navigate("/")}
+              size="lg"
+              className="rounded-pill bg-white text-black hover:bg-white/90 font-label text-[15px] px-10 mt-8"
+            >
+              Return Home
+            </Button>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-black py-20 px-6 lg:px-12">
+    <div className="min-h-screen bg-black flex flex-col">
+      <Navbar />
+      <div className="flex-1 py-20 px-6 lg:px-12">
       <div className="max-w-[800px] mx-auto space-y-12">
         {/* Back Button */}
         <button
@@ -404,6 +412,8 @@ const ProjectInquiry = () => {
           </div>
         )}
       </div>
+      </div>
+      <Footer />
     </div>
   );
 };

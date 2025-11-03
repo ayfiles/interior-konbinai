@@ -103,15 +103,15 @@ const PackagesSection = () => {
               onMouseLeave={() => resetTilt(index)}
               className={[
                 'group relative rounded-[28px] p-8 lg:p-12 flex flex-col',
-                // Base look
-                'bg-black/40 border border-white/[0.06]',
+                // Base look (slightly brighter by default)
+                'bg-white/[0.08] border border-white/[0.08]',
                 // Scroll reveal
                 'opacity-0 translate-y-4 scale-[0.98]',
                 visible[index] ? 'opacity-100 translate-y-0 scale-100' : '',
                 // Transitions
                 'transition duration-700 ease-out will-change-transform transform-gpu',
                 // Hover/press interactions
-                'hover:-translate-y-1 hover:bg-white/[0.06] hover:border-white/[0.12] active:translate-y-0',
+                'hover:-translate-y-1 hover:bg-white/[0.12] hover:border-white/[0.16] active:translate-y-0',
                 'shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.45)]',
               ].join(' ')}
               style={{ transitionDelay: `${index * 0.1}s` }}

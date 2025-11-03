@@ -8,6 +8,7 @@ import ProjectInquiry from "./pages/ProjectInquiry";
 import NotFound from "./pages/NotFound";
 import Terms from "./pages/Terms";
 import Imprint from "./pages/Imprint";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/project-inquiry" element={<ProjectInquiry />} />
           <Route path="/agb" element={<Terms />} />
           <Route path="/impressum" element={<Imprint />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

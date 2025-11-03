@@ -17,6 +17,10 @@ const Footer = () => {
               <a href="/impressum" className="hover:text-white underline-offset-4 hover:underline">
                 Impressum
               </a>
+              <span className="hidden sm:inline text-white/30">·</span>
+              <a href="/privacy" className="hover:text-white underline-offset-4 hover:underline">
+                Privacy Policy
+              </a>
             </div>
 
             {/* Right: socials */}

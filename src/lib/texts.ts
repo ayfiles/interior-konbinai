@@ -5,34 +5,70 @@ export const texts = {
     lang_toggle: "EN | DE",
     hero_headline: "Lets Create Together.",
     hero_subtitle: "visual convenience studio.",
-    hero_cta: "Lets Create",
-    portfolio: "Portfolio",
+    hero_cta: "Request Demo",
+    portfolio: "View Archive",
     gallery_title: "Previous Creations",
     gallery_subtitle: "Visually cinematic. Emotionally magnetic.",
+    usecase_title: "Who We Work With",
+    usecase_subtitle: "Tailored visual services for every client Segment",
+    usecase_estate_title: "Luxury Estate Agents",
+    usecase_estate_subtitle: "Before-Viewing Visuals",
+    usecase_estate_desc: "5-Image Sets | Delivered in 24 Hours",
+    usecase_estate_benefit: "Help agents sell atmosphere, not just layout",
+    usecase_airbnb_title: "Airbnb Consultants",
+    usecase_airbnb_subtitle: "Pre-Reno Visualization",
+    usecase_airbnb_desc: "8–10 Room Visuals",
+    usecase_airbnb_benefit: "Show ROI before spending on design",
+    usecase_developer_title: "Property Developers",
+    usecase_developer_subtitle: "Pre-Build Marketing Packs",
+    usecase_developer_desc: "Exterior + Full Interiors",
+    usecase_developer_benefit: "Helps sell unbuilt units with emotion",
+    usecase_designer_title: "Interior Designers",
+    usecase_designer_subtitle: "Your Invisible Concept Partner",
+    usecase_designer_desc: "White-label your work. Scale your pitch process.",
+    usecase_designer_benefit: "Visuals with editorial polish.",
+    howitworks_title: "How It Works",
+    howitworks_subtitle: "Make it feel effortless",
+    howitworks_step1_number: "01",
+    howitworks_step1_title: "Send Floorplans or References",
+    howitworks_step2_number: "02",
+    howitworks_step2_title: "Select Your Style & Package",
+    howitworks_step3_number: "03",
+    howitworks_step3_title: "Receive Cinematic Interiors in 24–48h",
     project_info: {
-      Salomon: {
-        date: "June 2023",
-        description: "Trail running campaign in southern France. Focused on speed, endurance, and the freedom of the wild terrain."
+      "Seoul Loft — Industrial Sanctuary": {
+        date: "December 2025",
+        timeframe: "Duration: 6 Days",
+        description:
+          "What happens when raw concrete meets the emotional softness of living?\n\nThe Seoul Loft explores a new Korean urban aesthetic — industrial, yes, but never cold. A space that embraces the grit of warehouse architecture while honoring the calm, restorative mindset found in modern Seoul living.\n\nThis concept imagines a compact two-level loft designed for young creatives: high ceilings, oversized steel-framed windows, exposed structure — but softened through intentional biophilic design. Climbing vines trace architectural lines, turning rigid geometry into living sculpture. Natural textures — worn leather, reclaimed wood, woven jute — ground the space in warmth and memory.\n\nEvery element performs double duty.\n\nThe mezzanine staircase becomes storage. The coffee table doubles as a workstation. The kitchen remains minimal and stainless-steel efficient, reflecting Seoul's compact housing culture — designed for movement, productivity, and social gathering. Light isn't decorative — it's directional, inviting, functional.\n\nMaterial honesty drives the experience: concrete stays concrete, metal stays metal, plants stay imperfect and alive. The beauty isn't added — it's revealed.\n\nThe result: an industrial loft that breathes, built not for spectacle but for everyday rhythm — morning tea by the window, late-night guitar sessions, friends gathered around a small table that feels big enough.\n\nA fictional interior case study inspired by Seoul's creative districts — Seongsu, Hapjeong, Itaewon — where former factories now hold new stories. Conceptualized by KONBINAI."
       },
       Kith: {
         date: "April 2023",
         description: "Lookbook production for Kith’s SS23 drop. Modern, urban vibes styled for maximal everyday coolness."
       },
-      "The North Face": {
-        date: "August 2022",
-        description: "Winter essentials for The North Face. Shot in alpine light to highlight outdoor protection and style."
+      "Oakley x Inuit": {
+        date: "November 2025",
+        timeframe: "Timeframe: 1 Week",
+        description:
+          "What if Oakley developed eyewear inspired by the Inuit?\n\nBringing ancestral intelligence into modern performance design.\n\nThe Oakley Heritage Project explores the intersection of survival and style — where form follows instinct, and technology pays homage to tradition.\n\nForged from brushed titanium, the slitted lenses echo the snow goggles once carved from bone and ivory — tools born out of necessity, reimagined as modern artifacts.\n\nA fictional collaboration between Oakley and Inuit craftsmanship,\nconceptualized by KONBINアイ."
       },
-      "Riot Hill": {
-        date: "September 2022",
-        description: "Editorial for Riot Hill’s retro jersey collection. Football-inspired aesthetics meet fashion attitude."
+      "IKEA x Off-White": {
+        date: "November 2025",
+        timeframe: "Timeframe: 1 Week",
+        description:
+          "What if accessible living carried cultural commentary?\n\nThe IKEA x Off-White Study imagines a home where everyday objects speak — literally. Rooted in Scandinavian modularity and Virgil Abloh's design language, the room becomes a curated tension between function and irony. Neutral textiles soften the space, while industrial straps, quotation-marked pillows, and labeled storage boxes challenge our relationship to \"HOME\" and \"SCULPTURE.\"\n\nPlywood surfaces and matte sage walls nod to IKEA's democratic design heritage — calm, durable, unfussy. Yet Off-White reframes them as artifacts of intention: furniture as message, living rooms as installations, domestic life as an ongoing exhibition. The result is a space that feels lived-in, yet hyper-aware of itself.\n\nThe result is a domestic installation that remains cozy, useful, and unmistakably Off-White — an accessible intersection of culture, utility, and interior design, documented and styled by KONBINAI."
       },
-      "SOI Studios": {
-        date: "December 2023",
-        description: "Brand launch visuals for SOI Studios. Crafted a unique visual language for their digital-first campaign."
+      "Vienna goes Japandi": {
+        date: "December 2025",
+        timeframe: "Timeframe: 1 Week",
+        description:
+          "How does a historic Viennese apartment evolve when serenity becomes the design brief?\n\nThis Japandi interior study transforms a classic Altbau space — high ceilings, herringbone parquet, ornate crown molding, a ceramic corner stove — by pairing its European heritage with Japanese restraint. Instead of competing with the architecture, the design breathes with it.\n\nNeutral textures and natural materials soften the room: light oak, woven jute, linen upholstery, matte ceramics, and tactful greenery. Rounded wooden tables and low seating bring visual calm, while open shelving highlights handcrafted objects rather than clutter. Daylight remains the hero, uninterrupted and intentionally framed.\n\nThe result is a home that feels both grounded and elevated — warmth without excess, minimalism without coldness. A quiet dialogue between Vienna's timeless elegance and Japan's philosophy of intentional living, documented and styled by KONBINAI."
       },
-      "Chanel Perfume": {
-        date: "February 2024",
-        description: "Art direction for Chanel’s latest scent campaign. Timeless luxury meets avant-garde aesthetics."
+      "IKEA Student Micro Studio": {
+        date: "November 2025",
+        timeframe: "Duration: 5 Days",
+        description:
+          "What does \"home\" look like when 18 square meters become your entire universe?\n\nThe IKEA Student Micro-Studio explores a modern reality — rising rents, shrinking footprints, and the need for dignity, comfort, and identity within limited space.\n\nThis concept rethinks living not through more room, but through smarter space.\n\nA modular environment that shifts with the day: sleeping above, studying below, dining at a foldable table, storage built seamlessly into every surface — without sacrificing warmth, light, or personality.\n\nConstructed from accessible materials — birch veneer, coated MDF, simple hardware — functionality becomes the aesthetic.\n\nThe loft-bed structure acts as architectural furniture: a bed, desk, shelving system, and privacy element in one. The kitchen remains compact yet complete — designed for efficiency rather than excess. Every object has a place, and every surface serves multiple purposes.\n\nThe result: a home that adapts, rather than a room that restricts.\n\nA reminder that good interior design isn't a luxury — it's a tool for opportunity, especially for students navigating their first independent space.\n\nA fictional case study on sustainable, democratic living — inspired by IKEA's design philosophy and conceptualized by KONBINAI."
       },
     },
     services_title: "Creative Services",
@@ -66,11 +102,11 @@ export const texts = {
       "Consistent brand voice",
       "Priority support",
       "Regular strategy sessions",
-      "Unlimited revisions",
+      "Further revisions",
     ],
 
-    contact_title: "Lets Create Together.",
-    contact_subtitle: "We collaborate with brands who want more than stock visuals.",
+    contact_title: "Let's Bring Your Ideas to Life.",
+    contact_subtitle: "Designed visuals for brands ready to stand out.",
 
     project_inquiry_title: "Project Inquiry",
     project_inquiry_subtitle: "Share your vision. We’ll tailor a proposal made just for you.",
@@ -84,11 +120,11 @@ export const texts = {
     package_partnership: "Creative Partnership",
     form_budget: "Budget Range *",
 
-    interest_ai: "AI Campaigns",
-    interest_product: "Product Imagery",
-    interest_motion: "Motion & Film",
-    interest_direction: "Creative Direction",
-    interest_consulting: "Consulting",
+    interest_estate: "Luxury Estate Agents",
+    interest_airbnb: "Airbnb Consultants",
+    interest_developer: "Property Developers",
+    interest_designer: "Interior Designers",
+    interest_other: "Other",
 
     budget_under1k: "Under €1,000",
     budget_1k_3k: "€1,000 - €3,000",
@@ -125,34 +161,70 @@ export const texts = {
     lang_toggle: "DE | EN",
     hero_headline: "Lass uns gemeinsam kreieren.",
     hero_subtitle: "visual convenience studio.",
-    hero_cta: "Projekt starten",
-    portfolio: "Portfolio",
-    gallery_title: "Frühere Projekte",
-    gallery_subtitle: "Visuell cineastisch. Emotional packend.",
+    hero_cta: "Demo anfordern",
+    portfolio: "Beispiele ansehen",
+    gallery_title: "Projekt-Highlights",
+    gallery_subtitle: "Sorgfältig inszenierte Interiors mit Atmosphäre.",
+    usecase_title: "Unsere Kunden & Branchen",
+    usecase_subtitle: "Maßgeschneiderte visuelle Services für unterschiedliche Geschäftsbereiche",
+    usecase_estate_title: "Luxus-Immobilienmakler",
+    usecase_estate_subtitle: "Vermarktungs-Visuals",
+    usecase_estate_desc: "5-Bild-Sets | Lieferung in 24 Stunden",
+    usecase_estate_benefit: "Helfen Maklern, Atmosphäre zu verkaufen, nicht nur Grundrisse",
+    usecase_airbnb_title: "Airbnb-Berater",
+    usecase_airbnb_subtitle: "Design-Vorschau",
+    usecase_airbnb_desc: "8–10 Raum-Visuals",
+    usecase_airbnb_benefit: "ROI zeigen, bevor Design-Kosten anfallen",
+    usecase_developer_title: "Immobilienentwickler",
+    usecase_developer_subtitle: "Projektmarketing",
+    usecase_developer_desc: "Außenansicht + Vollständige Innenräume",
+    usecase_developer_benefit: "Hilft, ungebaute Einheiten mit Emotion zu verkaufen",
+    usecase_designer_title: "Innenarchitekt:innen",
+    usecase_designer_subtitle: "Konzept-Visualisierung",
+    usecase_designer_desc: "White-Label Ihre Arbeit. Skalieren Sie Ihren Pitch-Prozess.",
+    usecase_designer_benefit: "Präzise gestaltete Raumvisuals",
+    howitworks_title: "So funktioniert's",
+    howitworks_subtitle: "Einfach und mühelos",
+    howitworks_step1_number: "01",
+    howitworks_step1_title: "Grundrisse oder Referenzen senden",
+    howitworks_step2_number: "02",
+    howitworks_step2_title: "Stil & Package auswählen",
+    howitworks_step3_number: "03",
+    howitworks_step3_title: "Cinematische Interiors in 24–48h erhalten",
     project_info: {
-      Salomon: {
-        date: "Juni 2023",
-        description: "Trailrunning-Kampagne in Südfrankreich. Fokus auf Tempo, Ausdauer und das Gefühl maximaler Freiheit."
+      "Seoul Loft — Industrial Sanctuary": {
+        date: "Dezember 2025",
+        timeframe: "Dauer: 6 Tage",
+        description:
+          "Was passiert, wenn roher Beton auf die emotionale Weichheit des Lebens trifft?\n\nDas Seoul Loft erkundet eine neue koreanische urbane Ästhetik — industriell, ja, aber niemals kalt. Ein Raum, der die Härte der Lagerhaus-Architektur umarmt, während er die ruhige, wiederherstellende Denkweise des modernen Seoul-Lebens ehrt.\n\nDieses Konzept stellt sich ein kompaktes zweistöckiges Loft vor, entworfen für junge Kreative: hohe Decken, überdimensionale stahlgerahmte Fenster, freiliegende Struktur — aber durch bewusstes biophiles Design gemildert. Kletternde Ranken folgen architektonischen Linien und verwandeln starre Geometrie in lebendige Skulptur. Natürliche Texturen — abgenutztes Leder, wiederverwendetes Holz, gewebte Jute — verankern den Raum in Wärme und Erinnerung.\n\nJedes Element erfüllt eine Doppelfunktion.\n\nDie Zwischengeschoss-Treppe wird zum Stauraum. Der Couchtisch fungiert als Arbeitsplatz. Die Küche bleibt minimal und edelstahleffizient und spiegelt Seouls kompakte Wohnkultur wider — entworfen für Bewegung, Produktivität und geselliges Beisammensein. Licht ist nicht dekorativ — es ist richtungsweisend, einladend, funktional.\n\nMaterialehrlichkeit treibt das Erlebnis: Beton bleibt Beton, Metall bleibt Metall, Pflanzen bleiben unvollkommen und lebendig. Die Schönheit wird nicht hinzugefügt — sie wird enthüllt.\n\nDas Ergebnis: ein industrielles Loft, das atmet, gebaut nicht für Spektakel, sondern für alltäglichen Rhythmus — Morgen-Tee am Fenster, Gitarren-Sessions spät in der Nacht, Freunde versammelt um einen kleinen Tisch, der sich groß genug anfühlt.\n\nEine fiktive Interior-Fallstudie inspiriert von Seouls kreativen Vierteln — Seongsu, Hapjeong, Itaewon — wo ehemalige Fabriken jetzt neue Geschichten beherbergen. Konzipiert von KONBINAI."
       },
       Kith: {
         date: "April 2023",
         description: "Lookbook-Produktion für Kith SS23. Moderner Großstadt-Look für maximale Everyday-Coolness."
       },
-      "The North Face": {
-        date: "August 2022",
-        description: "Winter-Essentials für The North Face. Im alpinen Licht inszeniert – Schutz & Stil im Outdoor."
+      "Oakley x Inuit": {
+        date: "November 2025",
+        timeframe: "Zeitraum: 1 Woche",
+        description:
+          "Was wäre, wenn Oakley Eyewear entwickeln würde, inspiriert von den Inuit?\n\nUraltes Wissen trifft moderne Performance.\n\nDas Oakley Heritage Project erkundet die Schnittstelle von Überleben und Stil – dort, wo Form dem Instinkt folgt und Technologie Tradition ehrt.\n\nGeschmiedet aus gebürstetem Titan erinnern die schmalen Schlitze der Gläser an Schnee-Brillen, die einst aus Knochen und Elfenbein geschnitzt wurden – Werkzeuge der Notwendigkeit, neu gedacht als moderne Artefakte.\n\nEine fiktive Kollaboration zwischen Oakley und Inuit-Handwerkskunst,\nkonzipiert von KONBINアイ."
       },
-      "Riot Hill": {
-        date: "September 2022",
-        description: "Editorial für Riot Hills Retro-Trikot-Kollektion. Fußball-Ästhetik trifft Fashion-Attitüde."
+      "IKEA x Off-White": {
+        date: "November 2025",
+        timeframe: "Zeitraum: 1 Woche",
+        description:
+          "Was wäre, wenn zugängliches Wohnen kulturelle Kommentare trüge?\n\nDie IKEA x Off-White Studie stellt sich ein Zuhause vor, in dem Alltagsgegenstände buchstäblich sprechen. Verwurzelt in skandinavischer Modularität und Virgil Ablohs Designsprache wird der Raum zu einer kuratierten Spannung zwischen Funktion und Ironie. Neutrale Textilien mildern den Raum, während industrielle Riemen, Anführungszeichen-Kissen und beschriftete Aufbewahrungsboxen unsere Beziehung zu \"ZUHAUSE\" und \"SKULPTUR\" herausfordern.\n\nSperrholzoberflächen und matte Salbeiwände nicken zu IKEAs demokratischem Design-Erbe – ruhig, langlebig, unkompliziert. Doch Off-White rahmt sie als Artefakte der Absicht neu ein: Möbel als Botschaft, Wohnzimmer als Installationen, häusliches Leben als fortlaufende Ausstellung. Das Ergebnis ist ein Raum, der sich gelebt anfühlt, doch hyper-bewusst seiner selbst.\n\nDas Ergebnis ist eine häusliche Installation, die gemütlich, nützlich und unverkennbar Off-White bleibt – eine zugängliche Schnittstelle von Kultur, Nutzen und Innenarchitektur, dokumentiert und gestylt von KONBINAI."
       },
-      "SOI Studios": {
-        date: "Dezember 2023",
-        description: "Brandlaunch für SOI Studios. Eine eigenständige Bildsprache für den digitalen Auftritt."
+      "Vienna goes Japandi": {
+        date: "Dezember 2025",
+        timeframe: "Zeitraum: 1 Woche",
+        description:
+          "Wie entwickelt sich eine historische Wiener Wohnung, wenn Gelassenheit zum Designbrief wird?\n\nDiese Japandi-Interior-Studie transformiert einen klassischen Altbau-Raum – hohe Decken, Fischgrätenparkett, verzierte Stuckdecken, ein Keramik-Kachelofen – indem sie das europäische Erbe mit japanischer Zurückhaltung kombiniert. Anstatt mit der Architektur zu konkurrieren, atmet das Design mit ihr.\n\nNeutrale Texturen und natürliche Materialien mildern den Raum: helles Eichenholz, gewebte Jute, Leinenbezüge, matte Keramik und taktvolles Grün. Abgerundete Holztische und niedrige Sitzmöbel bringen visuelle Ruhe, während offene Regale handgefertigte Objekte statt Unordnung hervorheben. Tageslicht bleibt der Held, ununterbrochen und absichtlich gerahmt.\n\nDas Ergebnis ist ein Zuhause, das sich sowohl geerdet als auch erhaben anfühlt – Wärme ohne Übermaß, Minimalismus ohne Kälte. Ein leiser Dialog zwischen Wiens zeitloser Eleganz und Japans Philosophie des bewussten Lebens, dokumentiert und gestylt von KONBINAI."
       },
-      "Chanel Perfume": {
-        date: "Februar 2024",
-        description: "Art Direction für Chanels neue Duftkampagne. Zeitlose Eleganz, avantgardistisch inszeniert."
+      "IKEA Student Micro Studio": {
+        date: "November 2025",
+        timeframe: "Dauer: 5 Tage",
+        description:
+          "Wie sieht \"Zuhause\" aus, wenn 18 Quadratmeter dein gesamtes Universum werden?\n\nDas IKEA Student Micro-Studio erkundet eine moderne Realität — steigende Mieten, schrumpfende Grundrisse und das Bedürfnis nach Würde, Komfort und Identität in begrenztem Raum.\n\nDieses Konzept denkt Leben nicht durch mehr Raum neu, sondern durch intelligenteren Raum.\n\nEine modulare Umgebung, die sich mit dem Tag verschiebt: Schlafen oben, Lernen unten, Essen an einem klappbaren Tisch, Stauraum nahtlos in jede Oberfläche eingebaut — ohne Wärme, Licht oder Persönlichkeit zu opfern.\n\nKonstruiert aus zugänglichen Materialien — Birkenfurnier, beschichtete MDF, einfache Hardware — wird Funktionalität zur Ästhetik.\n\nDie Loft-Bett-Struktur fungiert als architektonisches Möbel: Bett, Schreibtisch, Regalsystem und Privatsphäre-Element in einem. Die Küche bleibt kompakt, aber vollständig — für Effizienz statt Übermaß konzipiert. Jeder Gegenstand hat einen Platz, und jede Oberfläche dient mehreren Zwecken.\n\nDas Ergebnis: ein Zuhause, das sich anpasst, statt ein Raum, der einschränkt.\n\nEine Erinnerung, dass gutes Interior Design kein Luxus ist — es ist ein Werkzeug für Chancen, besonders für Studierende, die ihren ersten unabhängigen Raum navigieren.\n\nEine fiktive Fallstudie über nachhaltiges, demokratisches Wohnen — inspiriert von IKEAs Designphilosophie und konzipiert von KONBINAI."
       },
     },
     services_title: "Creative Services",
@@ -162,7 +234,7 @@ export const texts = {
     service_product_title: "Produktbilder",
     service_product_desc: "Hochwertige Visuals mit konsistenter, Studio-Qualität.",
     service_motion_title: "Motion & Film",
-    service_motion_desc: "Cineastische Loops und Storytelling-Clips für Social Media.",
+    service_motion_desc: "Cinematische Loops und Storytelling-Clips für Social Media.",
     service_direction_title: "Creative Direction",
     service_direction_desc: "Gestaltung des Looks, Rhythmus und emotionalen Kerns deiner Marke.",
 
@@ -186,11 +258,11 @@ export const texts = {
       "Konsistente Markenstimme",
       "Prioritäts-Support",
       "Regelmäßige Strategie-Sessions",
-      "Unbegrenzte Revisionen",
+      "Weitere Revisionen",
     ],
 
-    contact_title: "Lass uns gemeinsam kreieren.",
-    contact_subtitle: "Wir arbeiten mit Marken, die mehr wollen als Stock-Visuals.",
+    contact_title: "Lass uns deine Ideen zum Leben erwecken.",
+    contact_subtitle: "Gestaltete Visuals für Marken, die bereit sind, sich hervorzuheben.",
 
     project_inquiry_title: "Projektanfrage",
     project_inquiry_subtitle: "Teile deine Vision. Wir erstellen ein individuelles Angebot nur für dich.",
@@ -204,11 +276,11 @@ export const texts = {
     package_partnership: "Creative Partnership",
     form_budget: "Budgetrahmen *",
 
-    interest_ai: "AI Kampagnen",
-    interest_product: "Produktbilder",
-    interest_motion: "Motion & Film",
-    interest_direction: "Creative Direction",
-    interest_consulting: "Beratung",
+    interest_estate: "Luxus-Immobilienmakler",
+    interest_airbnb: "Airbnb-Berater",
+    interest_developer: "Immobilienentwickler",
+    interest_designer: "Innenarchitekt:innen",
+    interest_other: "Sonstiges",
 
     budget_under1k: "Unter 1.000 €",
     budget_1k_3k: "1.000 € – 3.000 €",

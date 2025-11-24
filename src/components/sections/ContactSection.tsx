@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/context/LanguageContext";
 import { texts } from "@/lib/texts";
+import { privacyDeHtml, privacyEnHtml } from "@/lib/privacy";
 
 const ContactSection = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const ContactSection = () => {
     name: "",
     email: "",
     interest: "",
+    budget: "",
     package: "",
   });
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
@@ -71,7 +73,7 @@ const ContactSection = () => {
         },
       });
       toast.success("Thanks! We'll be in touch soon.");
-      setFormData({ name: "", email: "", interest: "", package: "" });
+      setFormData({ name: "", email: "", interest: "", budget: "", package: "" });
       setAcceptPrivacy(false);
     } catch (error) {
       console.error("Error sending notification:", error);
@@ -80,18 +82,47 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-black py-24 lg:py-32 px-6 lg:px-12">
-      <div className="pointer-events-none absolute -top-10 left-0 right-0 h-10 lg:-top-16 lg:h-16 bg-gradient-to-b from-charcoal to-black" />
-      <div className="max-w-[700px] mx-auto space-y-12">
+    <section id="contact" className="relative bg-[#F2F0EF] dark:bg-black py-24 lg:py-32 px-6 lg:px-12 overflow-hidden">
+      <div className="pointer-events-none absolute -top-10 left-0 right-0 h-10 lg:-top-16 lg:h-16 bg-gradient-to-b from-white dark:from-black to-[#F2F0EF] dark:to-black z-10" />
+      
+      {/* Circles Overlay with fade out */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle, rgba(0,0,0,0.15) 1.5px, transparent 1.5px),
+            radial-gradient(circle, rgba(0,0,0,0.15) 1.5px, transparent 1.5px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 20px 20px',
+          maskImage: 'radial-gradient(ellipse 80% 60% at center, black 40%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at center, black 40%, transparent 100%)',
+        }}
+      />
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 hidden dark:block"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 20px 20px',
+          maskImage: 'radial-gradient(ellipse 80% 60% at center, black 40%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at center, black 40%, transparent 100%)',
+        }}
+      />
+      
+      <div className="max-w-[700px] mx-auto space-y-12 relative z-10">
         {/* Heading */}
         <div className="text-center space-y-4">
           <h2
-            className="font-bold text-white text-[40px] lg:text-[56px] leading-[1.15] tracking-tight"
+            className="font-bold text-black dark:text-white text-[40px] lg:text-[56px] leading-[1.15] tracking-tight"
             style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
           >
             {texts[currentLang].contact_title}
           </h2>
-          <p className="font-body text-white/85 text-[18px] lg:text-[20px]">
+          <p className="font-body text-black/85 dark:text-white/85 text-[18px] lg:text-[20px]">
             {texts[currentLang].contact_subtitle}
           </p>
         </div>
@@ -99,7 +130,7 @@ const ContactSection = () => {
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="name" className="font-body text-white/90 text-[15px]">
+            <Label htmlFor="name" className="font-body text-black/90 dark:text-white/90 text-[15px]">
               {texts[currentLang].form_name}
             </Label>
             <Input
@@ -108,12 +139,12 @@ const ContactSection = () => {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-xl h-12"
+              className="bg-black/8 dark:bg-white/10 border-black/15 dark:border-white/20 text-black dark:text-white placeholder:text-black/50 dark:placeholder:text-white/50 rounded-xl h-12"
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email" className="font-body text-white/90 text-[15px]">
+            <Label htmlFor="email" className="font-body text-black/90 dark:text-white/90 text-[15px]">
               {texts[currentLang].form_email}
             </Label>
             <Input
@@ -122,12 +153,12 @@ const ContactSection = () => {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-xl h-12"
+              className="bg-black/8 dark:bg-white/10 border-black/15 dark:border-white/20 text-black dark:text-white placeholder:text-black/50 dark:placeholder:text-white/50 rounded-xl h-12"
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="interest" className="font-body text-white/90 text-[15px]">
+            <Label htmlFor="interest" className="font-body text-black/90 dark:text-white/90 text-[15px]">
               {texts[currentLang].form_interest}
             </Label>
             <Select
@@ -135,28 +166,50 @@ const ContactSection = () => {
               onValueChange={(value) => setFormData({ ...formData, interest: value })}
               required
             >
-              <SelectTrigger className="bg-white/10 border-white/20 text-white rounded-xl h-12">
+              <SelectTrigger className="bg-black/8 dark:bg-white/10 border-black/15 dark:border-white/20 text-black dark:text-white rounded-xl h-12">
                 <SelectValue placeholder="Select an option" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="ai-campaigns">{texts[currentLang].interest_ai}</SelectItem>
-                <SelectItem value="product-visuals">{texts[currentLang].interest_product}</SelectItem>
-                <SelectItem value="motion-video">{texts[currentLang].interest_motion}</SelectItem>
-                <SelectItem value="creative-direction">{texts[currentLang].interest_direction}</SelectItem>
-                <SelectItem value="consulting">{texts[currentLang].interest_consulting}</SelectItem>
+                <SelectItem value="luxury-estate-agents">{texts[currentLang].interest_estate}</SelectItem>
+                <SelectItem value="airbnb-consultants">{texts[currentLang].interest_airbnb}</SelectItem>
+                <SelectItem value="property-developers">{texts[currentLang].interest_developer}</SelectItem>
+                <SelectItem value="interior-designers">{texts[currentLang].interest_designer}</SelectItem>
+                <SelectItem value="other">{texts[currentLang].interest_other}</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="package" className="font-body text-white/90 text-[15px]">
+            <Label htmlFor="budget" className="font-body text-black/90 dark:text-white/90 text-[15px]">
+              {texts[currentLang].form_budget}
+            </Label>
+            <Select
+              value={formData.budget}
+              onValueChange={(value) => setFormData({ ...formData, budget: value })}
+              required
+            >
+              <SelectTrigger className="bg-black/8 dark:bg-white/10 border-black/15 dark:border-white/20 text-black dark:text-white rounded-xl h-12">
+                <SelectValue placeholder="Select a budget range" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="under-1k">{texts[currentLang].budget_under1k}</SelectItem>
+                <SelectItem value="1k-3k">{texts[currentLang].budget_1k_3k}</SelectItem>
+                <SelectItem value="3k-5k">{texts[currentLang].budget_3k_5k}</SelectItem>
+                <SelectItem value="5k-10k">{texts[currentLang].budget_5k_10k}</SelectItem>
+                <SelectItem value="10k-plus">{texts[currentLang].budget_10k}</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="package" className="font-body text-black/90 dark:text-white/90 text-[15px]">
               {texts[currentLang].form_package}
             </Label>
             <Select
               value={formData.package}
               onValueChange={(value) => setFormData({ ...formData, package: value })}
             >
-              <SelectTrigger className="bg-white/10 border-white/20 text-white rounded-xl h-12">
+              <SelectTrigger className="bg-black/8 dark:bg-white/10 border-black/15 dark:border-white/20 text-black dark:text-white rounded-xl h-12">
                 <SelectValue placeholder={texts[currentLang].package_select} />
               </SelectTrigger>
               <SelectContent>
@@ -170,13 +223,13 @@ const ContactSection = () => {
           <div className="pt-2">
             <div className="flex items-start gap-3 mb-4">
               <Checkbox id="privacy-mini" checked={acceptPrivacy} onCheckedChange={(v) => setAcceptPrivacy(Boolean(v))} className="mt-1" />
-              <div className="font-body text-white/80 text-[14px] leading-6">
+              <div className="font-body text-black/80 dark:text-white/80 text-[14px] leading-6">
                 <label htmlFor="privacy-mini" className="select-none cursor-pointer">
                   {currentLang === 'DE'
                     ? 'Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.'
                     : 'I have read and agree to the privacy policy.'}
                 </label>{" "}
-                <button type="button" onClick={() => setPrivacyOpen(true)} className="underline hover:text-white">
+                <button type="button" onClick={() => setPrivacyOpen(true)} className="underline hover:text-black dark:hover:text-white">
                   {currentLang === 'DE' ? 'Datenschutzerklärung' : 'Privacy Policy'}
                 </button>
               </div>
@@ -187,7 +240,7 @@ const ContactSection = () => {
             <Button
               type="submit"
               size="lg"
-              className="w-full rounded-pill bg-white/20 border border-white/30 ring-1 ring-white/40 shadow-xl backdrop-blur-frosted text-white font-label text-[15px] h-12 transition-all duration-300 hover:bg-white/10 hover:ring-white/60"
+              className="w-full rounded-pill bg-black/10 dark:bg-white/20 border border-black/20 dark:border-white/30 ring-1 ring-black/20 dark:ring-white/40 shadow-xl backdrop-blur-frosted text-black dark:text-white font-label text-[15px] h-12 transition-all duration-300 hover:bg-black/15 dark:hover:bg-white/10 hover:ring-black/30 dark:hover:ring-white/60"
             >
               {texts[currentLang].submit}
             </Button>
@@ -195,44 +248,25 @@ const ContactSection = () => {
               type="button"
               onClick={() => navigate("/project-inquiry")}
               size="lg"
-              className="w-full rounded-pill bg-white/20 border border-white/30 ring-1 ring-white/40 shadow-xl backdrop-blur-frosted text-white font-label text-[15px] h-12 transition-all duration-300 hover:bg-white/10 hover:ring-white/60"
+              className="hidden w-full rounded-pill bg-black/10 dark:bg-white/20 border border-black/20 dark:border-white/30 ring-1 ring-black/20 dark:ring-white/40 shadow-xl backdrop-blur-frosted text-black dark:text-white font-label text-[15px] h-12 transition-all duration-300 hover:bg-black/15 dark:hover:bg-white/10 hover:ring-black/30 dark:hover:ring-white/60"
             >
               {texts[currentLang].full_inquiry}
             </Button>
           </div>
         </form>
         {privacyOpen && (
-          <div className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4 md:p-8 animate-fade-in" onClick={() => setPrivacyOpen(false)}>
-            <div className="relative w-full max-w-[820px] max-h-[80vh] rounded-3xl bg-white/12 border border-white/20 backdrop-blur-frosted shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-                <h3 className="text-white font-bold text-xl" style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}>
+          <div className="fixed inset-0 z-[100] bg-[#F2F0EF]/80 dark:bg-black/80 flex items-center justify-center p-4 md:p-8 animate-fade-in" onClick={() => setPrivacyOpen(false)}>
+            <div className="relative w-full max-w-[820px] max-h-[80vh] rounded-3xl bg-black/8 dark:bg-white/12 border border-black/15 dark:border-white/20 backdrop-blur-frosted shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+              <div className="flex items-center justify-between px-6 py-4 border-b border-black/10 dark:border-white/10">
+                <h3 className="text-black dark:text-white font-bold text-xl" style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}>
                   {currentLang === 'DE' ? 'Datenschutzerklärung' : 'Privacy Policy'}
                 </h3>
-                <button onClick={() => setPrivacyOpen(false)} className="text-white/80 hover:text-white font-body">✕</button>
+                <button onClick={() => setPrivacyOpen(false)} className="text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white font-body">✕</button>
               </div>
-              <div className="p-6 overflow-y-auto max-h-[70vh] space-y-4 text-white/85">
-                <p className="font-body text-[15px]">
-                  {currentLang === 'DE'
-                    ? 'Wir verarbeiten Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Ihre Daten werden sicher gespeichert und nicht an Dritte verkauft.'
-                    : 'We process your information solely to handle your inquiry. Your data is stored securely and will not be sold to third parties.'}
-                </p>
-                <p className="font-body text-[15px]">
-                  {currentLang === 'DE'
-                    ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertrag/ vorvertragliche Maßnahmen).'
-                    : 'The legal basis is Art. 6(1)(b) GDPR (contract/pre-contractual measures).'}
-                </p>
-                <p className="font-body text-[15px]">
-                  {currentLang === 'DE'
-                    ? 'Sie können Auskunft, Berichtigung oder Löschung Ihrer Daten verlangen.'
-                    : 'You can request access, correction, or deletion of your data at any time.'}
-                </p>
-                <p className="font-body text-[15px]">
-                  {currentLang === 'DE'
-                    ? 'Mit Klick auf „Senden“ stimmen Sie der Verarbeitung gemäß dieser Datenschutzerklärung zu.'
-                    : 'By clicking “Submit”, you agree to the processing described in this privacy policy.'}
-                </p>
+              <div className="p-6 overflow-y-auto max-h-[70vh] text-black/85 dark:text-white/85">
+                <div className="prose prose-invert max-w-none font-body text-[15px]" dangerouslySetInnerHTML={{ __html: currentLang === 'DE' ? privacyDeHtml : privacyEnHtml }} />
               </div>
-              <div className="px-6 py-4 border-t border-white/10 flex justify-end">
+              <div className="px-6 py-4 border-t border-black/10 dark:border-white/10 flex justify-end">
                 <Button onClick={() => setPrivacyOpen(false)} className="rounded-pill bg-white text-black hover:bg-white/90 font-label text-[14px] px-6">
                   {currentLang === 'DE' ? 'Schließen' : 'Close'}
                 </Button>

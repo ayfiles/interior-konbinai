@@ -39,14 +39,14 @@ const ValueSection = () => {
   ];
 
   return (
-    <section className="bg-charcoal py-24 lg:py-32 px-6 lg:px-12">
+    <section className="bg-[#F2F0EF] dark:bg-charcoal py-24 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1200px] mx-auto">
         {/* Intro */}
         <div className="text-center mb-20 lg:mb-28 max-w-[720px] mx-auto space-y-4">
-          <h2 className="font-display font-bold text-white text-[40px] lg:text-[56px] leading-[1.15] tracking-tight">
+          <h2 className="font-display font-bold text-black dark:text-white text-[40px] lg:text-[56px] leading-[1.15] tracking-tight">
             Traditional content is holding brands back.
           </h2>
-          <p className="font-body text-white/85 text-[18px] lg:text-[20px] leading-relaxed">
+          <p className="font-body text-black/85 dark:text-white/85 text-[18px] lg:text-[20px] leading-relaxed">
             Our solutions blend creativity and speed so your brand never misses a moment.
           </p>
         </div>
@@ -56,11 +56,11 @@ const ValueSection = () => {
           {cards.map((card, index) => (
             <div
               key={card.number}
-              className="bg-black/40 rounded-[28px] p-8 lg:p-12 relative overflow-hidden animate-fade-up"
+              className="bg-[#F2F0EF]/40 dark:bg-black/40 rounded-[28px] p-8 lg:p-12 relative overflow-hidden animate-fade-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Number Background */}
-              <div className="absolute top-8 left-8 lg:top-12 lg:left-12 font-display font-bold text-[64px] lg:text-[80px] text-white/[0.08] leading-none">
+              <div className="absolute top-8 left-8 lg:top-12 lg:left-12 font-display font-bold text-[64px] lg:text-[80px] text-black/[0.08] dark:text-white/[0.08] leading-none">
                 {card.number}
               </div>
 
@@ -68,29 +68,29 @@ const ValueSection = () => {
               <div className="relative space-y-8 pt-16 lg:pt-20">
                 {/* Problem */}
                 <div className="space-y-3">
-                  <p className="font-body font-medium text-[14px] lg:text-[15px] text-white/70 uppercase tracking-wider">
+                  <p className="font-body font-medium text-[14px] lg:text-[15px] text-black/70 dark:text-white/70 uppercase tracking-wider">
                     THE PROBLEM
                   </p>
-                  <h3 className="font-display font-bold text-white text-[26px] lg:text-[32px]">
+                  <h3 className="font-display font-bold text-black dark:text-white text-[26px] lg:text-[32px]">
                     {card.problem}
                   </h3>
-                  <p className="font-body text-white/80 text-[17px] lg:text-[18px] max-w-[800px]">
+                  <p className="font-body text-black/80 dark:text-white/80 text-[17px] lg:text-[18px] max-w-[800px]">
                     {card.problemDesc}
                   </p>
                 </div>
 
                 {/* Divider */}
-                <div className="h-px bg-white/[0.08] max-w-full" />
+                <div className="h-px bg-black/[0.08] dark:bg-white/[0.08] max-w-full" />
 
                 {/* Solution */}
                 <div className="space-y-3">
-                  <p className="font-body font-medium text-[14px] lg:text-[15px] text-white/70 uppercase tracking-wider">
+                  <p className="font-body font-medium text-[14px] lg:text-[15px] text-black/70 dark:text-white/70 uppercase tracking-wider">
                     OUR SOLUTION
                   </p>
-                  <h3 className="font-display font-semibold italic text-white text-[24px] lg:text-[30px]">
+                  <h3 className="font-display font-semibold italic text-black dark:text-white text-[24px] lg:text-[30px]">
                     {card.solution}
                   </h3>
-                  <p className="font-body italic text-white/85 text-[17px] lg:text-[18px] max-w-[800px]">
+                  <p className="font-body italic text-black/85 dark:text-white/85 text-[17px] lg:text-[18px] max-w-[800px]">
                     {card.solutionDesc}
                   </p>
                 </div>

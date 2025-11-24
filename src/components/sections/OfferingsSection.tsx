@@ -79,19 +79,19 @@ const OfferingsSection = () => {
   };
 
   return (
-    <section className="relative bg-charcoal py-24 lg:py-32 px-6 lg:px-12">
-      {/* Smooth top gradient from previous black section into charcoal */}
-      <div className="pointer-events-none absolute -top-16 left-0 right-0 h-16 bg-gradient-to-b from-black to-charcoal" />
+    <section className="relative bg-[#F2F0EF] dark:bg-charcoal py-24 lg:py-32 px-6 lg:px-12">
+      {/* Smooth top gradient from previous section */}
+      <div className="pointer-events-none absolute -top-16 left-0 right-0 h-16 bg-gradient-to-b from-white dark:from-black to-[#F2F0EF] dark:to-charcoal" />
       <div className="max-w-[1200px] mx-auto">
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16 space-y-4">
           <h2
-            className="font-bold text-white text-[40px] lg:text-[56px] leading-[1.15] tracking-tight"
+            className="font-bold text-black dark:text-white text-[40px] lg:text-[56px] leading-[1.15] tracking-tight"
             style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
           >
             {texts[currentLang].services_title}
           </h2>
-          <p className="font-body text-white/85 text-[18px] lg:text-[20px] max-w-[800px] mx-auto">
+          <p className="font-body text-black/85 dark:text-white/85 text-[18px] lg:text-[20px] max-w-[800px] mx-auto">
             {texts[currentLang].services_subtitle}
           </p>
         </div>
@@ -108,25 +108,25 @@ const OfferingsSection = () => {
               className={[
                 'group relative rounded-[28px] p-8 lg:p-12 space-y-3',
                 // Base look (slightly brighter by default)
-                'bg-white/[0.08] border border-white/[0.08]',
+                'bg-black/[0.08] dark:bg-white/[0.08] border border-black/[0.08] dark:border-white/[0.08]',
                 // Scroll reveal
                 'opacity-0 translate-y-4 scale-[0.98]',
                 visible[index] ? 'opacity-100 translate-y-0 scale-100' : '',
                 // Transitions
                 'transition duration-700 ease-out will-change-transform transform-gpu',
                 // Hover/press interactions
-                'hover:-translate-y-1 hover:bg-white/[0.12] hover:border-white/[0.16] active:translate-y-0',
+                'hover:-translate-y-1 hover:bg-black/[0.12] dark:hover:bg-white/[0.12] hover:border-black/[0.16] dark:hover:border-white/[0.16] active:translate-y-0',
                 'shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.45)]',
               ].join(' ')}
               style={{ transitionDelay: `${index * 0.08}s` }}
             >
               {/* Glow overlay */}
               <div className="pointer-events-none absolute inset-0 rounded-[28px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'radial-gradient(120px 120px at 50% 20%, rgba(255,255,255,0.07), rgba(255,255,255,0))' }} />
-              <h3 className="font-display font-bold text-white text-[22px] lg:text-[24px] whitespace-nowrap truncate">
+              <h3 className="font-display font-bold text-black dark:text-white text-[22px] lg:text-[24px] whitespace-nowrap truncate">
                 <span className="inline-block align-middle" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>{offering.title}</span>
                 <span className="inline-block align-middle ml-2 translate-x-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">→</span>
               </h3>
-              <p className="font-body text-white/85 text-[15px] lg:text-[16px] leading-relaxed">
+              <p className="font-body text-black/85 dark:text-white/85 text-[15px] lg:text-[16px] leading-relaxed">
                 {offering.description}
               </p>
             </div>

@@ -4,21 +4,21 @@ const Footer = () => {
   return (
     <footer className="bg-transparent">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
-        <div className="rounded-[24px] bg-white/10 border border-white/20 backdrop-blur-frosted shadow-[0_8px_30px_rgba(0,0,0,0.25)] px-5 lg:px-8 py-3">
+        <div className="rounded-[24px] bg-black/8 dark:bg-white/10 border border-black/15 dark:border-white/20 backdrop-blur-frosted shadow-[0_8px_30px_rgba(0,0,0,0.25)] px-5 lg:px-8 py-3">
           <div className="flex flex-row items-center justify-between gap-3 md:gap-6 flex-wrap">
             {/* Left: legal */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-white/80 font-body text-[13px]">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-black/80 dark:text-white/80 font-body text-[13px]">
               <span className="whitespace-nowrap">©2025 konbinai. All rights reserved</span>
-              <span className="hidden sm:inline text-white/30">·</span>
-              <a href="/agb" className="hover:text-white underline-offset-4 hover:underline">
+              <span className="hidden sm:inline text-black/30 dark:text-white/30">·</span>
+              <span className="text-black/60 dark:text-white/60">
                 Allgemeine Geschäftsbedingungen
-              </a>
-              <span className="hidden sm:inline text-white/30">·</span>
-              <a href="/impressum" className="hover:text-white underline-offset-4 hover:underline">
+              </span>
+              <span className="hidden sm:inline text-black/30 dark:text-white/30">·</span>
+              <a href="/impressum" className="hover:text-black dark:hover:text-white underline-offset-4 hover:underline">
                 Impressum
               </a>
-              <span className="hidden sm:inline text-white/30">·</span>
-              <a href="/privacy" className="hover:text-white underline-offset-4 hover:underline">
+              <span className="hidden sm:inline text-black/30 dark:text-white/30">·</span>
+              <a href="/privacy" className="hover:text-black dark:hover:text-white underline-offset-4 hover:underline">
                 Privacy Policy
               </a>
             </div>
@@ -30,7 +30,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/15 border border-white/25 backdrop-blur-frosted text-white hover:bg-white/25 transition-all"
+                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/10 dark:bg-white/15 border border-black/20 dark:border-white/25 backdrop-blur-frosted text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/25 transition-all"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -39,7 +39,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="TikTok"
-                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/15 border border-white/25 backdrop-blur-frosted text-white hover:bg-white/25 transition-all"
+                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/10 dark:bg-white/15 border border-black/20 dark:border-white/25 backdrop-blur-frosted text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/25 transition-all"
                 title="TikTok"
               >
                 {/* TikTok icon */}
@@ -52,7 +52,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/15 border border-white/25 backdrop-blur-frosted text-white hover:bg-white/25 transition-all"
+                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/10 dark:bg-white/15 border border-black/20 dark:border-white/25 backdrop-blur-frosted text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/25 transition-all"
               >
                 <Linkedin className="h-5 w-5" />
               </a>

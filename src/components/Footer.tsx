@@ -1,6 +1,12 @@
 import { Instagram, Linkedin } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { texts } from "@/lib/texts";
 
 const Footer = () => {
+  const { currentLang } = useLanguage();
+  const t = texts[currentLang];
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-transparent">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
@@ -8,18 +14,16 @@ const Footer = () => {
           <div className="flex flex-row items-center justify-between gap-3 md:gap-6 flex-wrap">
             {/* Left: legal */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-black/80 dark:text-white/80 font-body text-[13px]">
-              <span className="whitespace-nowrap">©2025 konbinai. All rights reserved</span>
+              <span className="whitespace-nowrap">©{year} konbinai. {t.footer_copyright}</span>
               <span className="hidden sm:inline text-black/30 dark:text-white/30">·</span>
-              <span className="text-black/60 dark:text-white/60">
-                Allgemeine Geschäftsbedingungen
-              </span>
+              <span className="text-black/60 dark:text-white/60">{t.footer_terms}</span>
               <span className="hidden sm:inline text-black/30 dark:text-white/30">·</span>
               <a href="/impressum" className="hover:text-black dark:hover:text-white underline-offset-4 hover:underline">
-                Impressum
+                {t.footer_imprint}
               </a>
               <span className="hidden sm:inline text-black/30 dark:text-white/30">·</span>
               <a href="/privacy" className="hover:text-black dark:hover:text-white underline-offset-4 hover:underline">
-                Privacy Policy
+                {t.footer_privacy}
               </a>
             </div>
 

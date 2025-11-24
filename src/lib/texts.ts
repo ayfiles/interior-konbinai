@@ -154,6 +154,10 @@ export const texts = {
     timeline_flexible: "Flexible",
     timeline_ongoing: "Ongoing / Retainer",
     back_home: "Back to Home",
+    footer_copyright: "All rights reserved",
+    footer_terms: "Terms & Conditions",
+    footer_imprint: "Imprint",
+    footer_privacy: "Privacy Policy",
   },
   DE: {
     brand: "visual convenience studio.",
@@ -310,5 +314,9 @@ export const texts = {
     timeline_flexible: "Flexibel",
     timeline_ongoing: "Laufend / Retainer",
     back_home: "Zurück zur Homepage",
+    footer_copyright: "Alle Rechte vorbehalten",
+    footer_terms: "Allgemeine Geschäftsbedingungen",
+    footer_imprint: "Impressum",
+    footer_privacy: "Datenschutzerklärung",
   }
 } as const;

@@ -84,7 +84,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Konbinai Notifications <onboarding@resend.dev>",
-      to: ["aytac.files@gmail.com"],
+      to: ["konbinai.visual@gmail.com"],
       subject: subject,
       html: emailHtml,
     });

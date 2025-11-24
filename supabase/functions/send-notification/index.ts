@@ -37,7 +37,9 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const data: NotificationRequest = await req.json();
+    const bodyText = await req.text();
+    console.log("Incoming request body:", bodyText);
+    const data: NotificationRequest = bodyText ? JSON.parse(bodyText) : ({} as NotificationRequest);
 
     let emailHtml = "";
     let subject = "";

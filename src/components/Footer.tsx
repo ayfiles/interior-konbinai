@@ -26,7 +26,7 @@ const Footer = () => {
             {/* Right: socials */}
             <div className="flex items-center gap-2 ml-auto">
               <a
-                href="https://instagram.com/yourhandle"
+                href="https://www.instagram.com/konbinai/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://tiktok.com/@yourhandle"
+                href="https://www.tiktok.com/@konbinai"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="TikTok"
@@ -47,15 +47,15 @@ const Footer = () => {
                   <path d="M16.5 3.5c.9 1.3 2.1 2.3 3.5 2.7v3.1c-1.3-.1-2.6-.5-3.8-1.2v5.7c0 3.9-3.1 7-7 7s-7-3.1-7-7 3.1-7 7-7c.3 0 .6 0 .9.1v3.4c-.3-.1-.6-.1-.9-.1-2 0-3.6 1.6-3.6 3.6S7.2 18.1 9.2 18.1s3.6-1.6 3.6-3.6V2.5h3.7z" />
                 </svg>
               </a>
-              <a
-                href="https://www.linkedin.com/company/yourhandle"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/10 dark:bg-white/15 border border-black/20 dark:border-white/25 backdrop-blur-frosted text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/25 transition-all"
+              <button
+                type="button"
+                aria-label="LinkedIn (coming soon)"
+                aria-disabled="true"
+                className="group inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/5 dark:bg-white/10 border border-dashed border-black/20 dark:border-white/25 backdrop-blur-frosted text-black/40 dark:text-white/40 cursor-not-allowed"
+                title="LinkedIn soon"
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -31,6 +31,14 @@ interface InterestRequest {
 
 type NotificationRequest = ProjectInquiryRequest | InterestRequest;
 
+const budgetLabels: Record<string, string> = {
+  "under-1k": "Under €1,000",
+  "1k-3k": "€1,000 - €3,000",
+  "3k-5k": "€3,000 - €5,000",
+  "5k-10k": "€5,000 - €10,000",
+  "10k-plus": "€10,000+",
+};
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -73,12 +81,16 @@ const handler = async (req: Request): Promise<Response> => {
       const packageHtml = data.package
         ? `<p><strong>Package:</strong> ${data.package === 'project-based' ? 'Project Based' : 'Creative Partnership'}</p>`
         : '';
+      const budgetHtml = data.budget
+        ? `<p><strong>Budget:</strong> ${budgetLabels[data.budget] ?? data.budget}</p>`
+        : '';
       emailHtml = `
         <h2>Someone is Interested!</h2>
         <p><strong>Name:</strong> ${data.name}</p>
         <p><strong>Email:</strong> ${data.email}</p>
         <p><strong>Interest:</strong> ${data.interest}</p>
         ${packageHtml}
+        ${budgetHtml}
       `;
     }
 
